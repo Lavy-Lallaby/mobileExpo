@@ -1,14 +1,16 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HeaderButton } from "react-navigation-header-buttons";
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import SecondP from './screens/SecondP';
-import HomeScreen from './screens/HomeScreen'
+import AboutScreen from './screens/AboutScreen';
+import HomeScreen from './screens/HomeScreen';
 
 const Stack = createNativeStackNavigator()
 
 const App = () => {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='HomeScreen'>
@@ -23,7 +25,7 @@ const App = () => {
             fontWeight: 'bold',
           },
         }} />
-        <Stack.Screen name="SecondP" component={SecondP} options={{
+        <Stack.Screen name="AboutScreen" component={AboutScreen} options={{
           title: 'Second Page', headerStyle: {
             backgroundColor: '#E9BFE2',
           },
